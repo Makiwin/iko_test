@@ -46,10 +46,11 @@ $theme-colors: (
   warning: $yellow,
   danger: $red,
   light: $gray-100,
-  dark: $gray-800,
+  dark: rgb(0, 94, 184),
 );
 
 // Use Bootstrap defaults for other variables, imported here so we can access all app variables in one place when used
 // in components.
 @import "~bootstrap/scss/_functions";
 @import "~bootstrap/scss/_variables";
+@import "../app/@core/now-ui/now-ui-dashboard.scss";
