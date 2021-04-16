@@ -1,19 +1,15 @@
 <div class="container-fluid">
   <div class="jumbotron text-center">
     <h1>
-      <img class="logo" src="assets/ngx-rocket-logo.png" alt="angular logo" />
-      <span translate>Hello world !</span>
+      <img class="logo" src="assets/iko-logo-clean-white.svg" alt="angular logo" />
+      <br />
+      <span translate>IKO Shop Test</span>
     </h1>
     <app-loader [isLoading]="isLoading"></app-loader>
     <q [hidden]="isLoading">{{ quote }}</q>
     <p>
-      <button
-        class="btn btn-primary"
-        angulartics2On="click"
-        angularticsAction="Click button below quote"
-        [angularticsCategory]="quote"
-      >
-        Click me to send an Analytics event
+      <button class="btn btn-primary" routerLink="/shop">
+        {{ 'HOME_COME_TO_VISIT_SHOP' | translate }}
       </button>
     </p>
   </div>
