@@ -43,6 +43,19 @@
                 </translations>
             </concept_node>
             <concept_node>
+                <name>COLOR</name>
+                <definition_loaded>false</definition_loaded>
+                <description/>
+                <comment/>
+                <default_text/>
+                <translations>
+                    <translation>
+                        <language>en-US</language>
+                        <approved>false</approved>
+                    </translation>
+                </translations>
+            </concept_node>
+            <concept_node>
                 <name>COLOR_BLACK</name>
                 <definition_loaded>false</definition_loaded>
                 <description/>
@@ -70,6 +83,32 @@
             </concept_node>
             <concept_node>
                 <name>COLOR_GREY</name>
+                <definition_loaded>false</definition_loaded>
+                <description/>
+                <comment/>
+                <default_text/>
+                <translations>
+                    <translation>
+                        <language>en-US</language>
+                        <approved>false</approved>
+                    </translation>
+                </translations>
+            </concept_node>
+            <concept_node>
+                <name>DESCRIPTION</name>
+                <definition_loaded>false</definition_loaded>
+                <description/>
+                <comment/>
+                <default_text/>
+                <translations>
+                    <translation>
+                        <language>en-US</language>
+                        <approved>false</approved>
+                    </translation>
+                </translations>
+            </concept_node>
+            <concept_node>
+                <name>DETAILS</name>
                 <definition_loaded>false</definition_loaded>
                 <description/>
                 <comment/>
@@ -186,7 +225,33 @@
                 </translations>
             </concept_node>
             <concept_node>
+                <name>RELATED_PRODUCTS</name>
+                <definition_loaded>false</definition_loaded>
+                <description/>
+                <comment/>
+                <default_text/>
+                <translations>
+                    <translation>
+                        <language>en-US</language>
+                        <approved>false</approved>
+                    </translation>
+                </translations>
+            </concept_node>
+            <concept_node>
                 <name>Remember me</name>
+                <definition_loaded>false</definition_loaded>
+                <description/>
+                <comment/>
+                <default_text/>
+                <translations>
+                    <translation>
+                        <language>en-US</language>
+                        <approved>false</approved>
+                    </translation>
+                </translations>
+            </concept_node>
+            <concept_node>
+                <name>SIZE</name>
                 <definition_loaded>false</definition_loaded>
                 <description/>
                 <comment/>

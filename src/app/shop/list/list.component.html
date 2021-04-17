@@ -1,0 +1,16 @@
+<div class="container-list">
+  <div
+    class="card"
+    style="width: 20rem"
+    *ngFor="let product of products$ | async"
+    [routerLink]="['/shop', product.productId]"
+  >
+    <img class="card-img-top" [src]="product.imageUrl" alt="Card image cap" />
+    <div class="card-body">
+      <h5 class="card-title text-center">{{ product.title }}</h5>
+      <div class="price text-center">
+        {{ product.price | currency: 'USD' }}
+      </div>
+    </div>
+  </div>
+</div>

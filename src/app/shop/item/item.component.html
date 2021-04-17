@@ -1,0 +1,68 @@
+<div class="container">
+  <ng-container *ngIf="products$ | async as product">
+    <ngb-carousel class="carousel">
+      <ng-container *ngIf="product.images; else singleImage">
+        <ng-template ngbSlide *ngFor="let image of product.images">
+          <div class="picsum-img-wrapper">
+            <img [src]="image" alt="{{ product.title }}" />
+          </div>
+        </ng-template>
+      </ng-container>
+      <ng-template ngbSlide #singleImage>
+        <div class="picsum-img-wrapper">
+          <img [src]="product.imageUrl" alt="{{ product.title }}" />
+        </div>
+      </ng-template>
+    </ngb-carousel>
+    <div class="title">{{ product.title }}</div>
+    <div class="price">{{ product.price | currency: 'USD' }}</div>
+    <ngb-accordion [activeIds]="openPanels">
+      <ngb-panel title="{{ 'DESCRIPTION' | translate }}" id="description">
+        <ng-template ngbPanelContent>
+          <div [innerHTML]="product.description"></div>
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="{{ 'DETAILS' | translate }}" id="description" id="details" title="Detail" *ngIf="hasDetail">
+        <ng-template ngbPanelContent>
+          <form>
+            <div class="form-group row d-flex flex-row justify-content-around" *ngIf="product.color?.length > 0">
+              <label for="color" class="col-form-label">{{ 'COLOR' | translate }}</label>
+              <div class="details-choose">
+                <select id="color" class="form-control">
+                  <option *ngFor="let color of product.color" [value]="color.colorId">
+                    {{ color.translate_key ? (color.translate_key | translate) : color.name }}
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row d-flex flex-row justify-content-around" *ngIf="product.sizes?.length > 0">
+              <label for="color" class="col-form-label">{{ 'SIZE' | translate }}</label>
+              <div class="details-choose">
+                <select id="size" class="form-control">
+                  <option *ngFor="let size of product.sizes" [value]="size.sizeId">{{ size.name }}</option>
+                </select>
+              </div>
+            </div>
+          </form>
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="{{ 'RELATED_PRODUCTS' | translate }}" id="related" *ngIf="product.relatedProducts.length > 0">
+        <ng-template ngbPanelContent>
+          <carousel [loop]="true">
+            <div class="carousel-cell" *ngFor="let relProduct of product.relatedProducts | relatedProducts | async">
+              <div class="card" [routerLink]="['/shop', relProduct.productId]">
+                <img class="card-img-top related" [src]="relProduct.imageUrl" alt="Card image cap" />
+                <div class="card-body">
+                  <h5 class="card-title text-center">{{ relProduct.title }}</h5>
+                  <div class="price min text-center">
+                    {{ relProduct.price | currency: 'USD' }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </carousel>
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
+  </ng-container>
+</div>

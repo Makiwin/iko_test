@@ -6,6 +6,7 @@ export interface ProductModel {
   title: string;
   description: string;
   imageUrl: string;
+  images?: string[];
   price: number;
   sizes?: Size[];
   color?: Color[];

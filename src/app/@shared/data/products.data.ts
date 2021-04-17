@@ -15,10 +15,14 @@ export const dataProducts: ProductModel[] = [
     Certification Credits are valid for 1 year.`,
     imageUrl:
       'https://cdn.ikointl.com/sites/default/files/styles/shop_image/public/kiteboarder-certification-credits.png?itok=zOb4opap',
+    images: [
+      'https://cdn.ikointl.com/sites/default/files/styles/shop_image/public/kiteboarder-certification-credits.png?itok=zOb4opap',
+      'https://cdn.ikointl.com/sites/default/files/styles/shop_image/public/kiteboarder-certification-credits.png?itok=zOb4opap',
+    ],
     price: 63,
     sizes: [],
     color: [],
-    relatedProducts: [],
+    relatedProducts: [2, 3, 4],
   },
   {
     productId: 2,
@@ -37,7 +41,7 @@ export const dataProducts: ProductModel[] = [
     price: 112,
     sizes: [],
     color: [],
-    relatedProducts: [],
+    relatedProducts: [1, 3, 4],
   },
   {
     productId: 3,
@@ -56,7 +60,7 @@ export const dataProducts: ProductModel[] = [
     price: 42,
     sizes: [],
     color: [],
-    relatedProducts: [],
+    relatedProducts: [1, 2, 4],
   },
   {
     productId: 4,
@@ -99,31 +103,7 @@ export const dataProducts: ProductModel[] = [
     price: 24.5,
     sizes: [],
     color: [],
-    relatedProducts: [],
-  },
-  {
-    productId: 5,
-    title: 'IKO Cap',
-    description: `
-    <p>Protect your scalp in style and make a statement about your passion for kiteboarding.</p>
-<ul>
-<li><span class="wysiwyg pf-d-block">60% cotton, 40% polyester*</span></li>
-<li><span class="wysiwyg pf-d-block">Mid-profile cap with a low-profile embroidery area</span></li>
-<li><span class="wysiwyg pf-d-block">Structured, six-panel cap</span></li>
-<li><span class="wysiwyg pf-d-block">Hard buckram front panels</span></li>
-<li><span class="wysiwyg pf-d-block">Mesh back</span></li>
-<li><span class="wysiwyg pf-d-block">Permacurv visor, matching under-visor</span></li>
-<li><span class="wysiwyg pf-d-block">Plastic adjustable closure</span></li>
-<li><span class="wysiwyg pf-d-block">3.5″ crown (8.9 cm)</span></li>
-<li><span class="wysiwyg pf-d-block">Head circumference: 21⅝″–23⅝″ (54.9 cm–60 cm)</span></li>
-<li><span class="wysiwyg pf-d-block">Blank product sourced from Vietnam or Bangladesh</span></li>
-</ul>`,
-    imageUrl:
-      'https://cdn.ikointl.com/sites/default/files/styles/shop_list_image/public/mockup-123646f8.jpg?itok=XX9Da5J5',
-    price: 24.5,
-    sizes: [],
-    color: [],
-    relatedProducts: [],
+    relatedProducts: [6, 7, 8],
   },
   {
     productId: 6,
@@ -151,7 +131,7 @@ export const dataProducts: ProductModel[] = [
       { sizeId: 5, name: 'XXL' },
     ],
     color: [{ colorId: 1, name: 'Grey', translate_key: 'COLOR_GREY' }],
-    relatedProducts: [],
+    relatedProducts: [5, 7, 8],
   },
   {
     productId: 7,
@@ -199,13 +179,12 @@ export const dataProducts: ProductModel[] = [
       { sizeId: 5, name: 'XXL' },
     ],
     color: [{ colorId: 2, name: 'Blue', translate_key: 'COLOR_BLUE' }],
-    relatedProducts: [],
+    relatedProducts: [9, 10, 7, 6],
   },
   {
     productId: 9,
     title: "Men's Tshirt Navy",
-    description: `
-    <<p><span class="wysiwyg pf-d-block">It's made of a heavier cotton and the double-stitched neckline and sleeves give it more durability, so it can become an everyday favorite.</span></p>
+    description: `<p><span class="wysiwyg pf-d-block">It's made of a heavier cotton and the double-stitched neckline and sleeves give it more durability, so it can become an everyday favorite.</span></p>
     <ul>
     <li><span class="wysiwyg pf-d-block">Solid colors are 100% ring-spun cotton</span></li>
     <li><span class="wysiwyg pf-d-block">Fabric weight: 4.5 oz/y² (153 g/m²)</span></li>
@@ -227,7 +206,7 @@ export const dataProducts: ProductModel[] = [
       { sizeId: 5, name: 'XXL' },
     ],
     color: [{ colorId: 2, name: 'Blue', translate_key: 'COLOR_BLUE' }],
-    relatedProducts: [],
+    relatedProducts: [10, 8, 7, 6],
   },
   {
     productId: 10,
@@ -238,8 +217,7 @@ export const dataProducts: ProductModel[] = [
     <li>Durable&nbsp;rib neckband</li>
     </ul>
     <p>Available in&nbsp;military green and brown (2016 collection) and turquoise and indigo (2018 collection)</p>`,
-    imageUrl:
-      'https://cdn.ikointl.com/sites/default/files/styles/shop_list_image/public/mockup-730545f5.jpg?itok=ZnnYKwQF',
+    imageUrl: 'https://cdn.ikointl.com/sites/default/files/styles/shop_image/public/iko-shirt-black.jpeg?itok=cciP5UGG',
     price: 17.5,
     sizes: [
       { sizeId: 1, name: 'S' },
@@ -249,6 +227,6 @@ export const dataProducts: ProductModel[] = [
       { sizeId: 5, name: 'XXL' },
     ],
     color: [{ colorId: 2, name: 'Black', translate_key: 'COLOR_BLACK' }],
-    relatedProducts: [],
+    relatedProducts: [9, 8, 7, 6],
   },
 ];
